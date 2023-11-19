@@ -1,12 +1,13 @@
 import os
 import openai
 import streamlit as st
-headers={
-    openai.api_key : st.secrets["auth_key"]
-}
+
 
 from PyPDF2 import PdfReader
 from dotenv import load_dotenv
+headers={
+    openai.api_key : st.secrets["auth_key"]
+}
 load_dotenv()
 
 openai.api_key=os.getenv("OPENAI_API_KEY")
